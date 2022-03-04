@@ -1,0 +1,68 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+    nav{
+        position: relative;
+    }
+        nav > h3 > a{
+            position: absolute;
+            right: 30px;
+            top: 5px;
+        }
+        
+    h1{
+        margin-left: 20px;
+    }
+
+    aside{
+        border: 1px solid black;
+        width: 20%;
+        margin: 0 20px 0 20px;
+        padding: 10px;
+        display: inline-block;
+    }
+        aside > ul{
+            padding: 0px;
+        }
+            aside > ul > li{
+                list-style: none;
+                padding: 10px;
+            }
+            aside > ul > li:hover{
+                cursor: pointer;
+                background-color: rgb(147, 247, 189);
+            }
+    div#chat{
+        width: 70%;
+        height: 70vh;
+        vertical-align: top;
+        border: 1px solid black;
+        display: inline-block;
+        position: relative;
+    }
+        div#chat > form{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+        }
+        div#chat > form > input[type="text"]{
+            width: 90%;
+        }
+            p.messages{
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 20px;
+                width: 50%;
+                
+            }
+            p.right{
+                margin-right: 5px;
+                margin-left: auto;
+            }
+            p.right{
+                margin-left: 5px;
+                margin-right: auto;
+            }

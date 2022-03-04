@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('./partials/chatbox_header') %>
+
+</head>
+<body>
+
+    <nav>
+        <h1>ChatBox</h1>
+        <h3><a href="/add_contact">Add Contact</a></h3>
+    </nav>
+
+    <!-- List of Contacts -->
+    <aside>
+        <h3>Contacts</h3>
+        <% for(let counter = 0; counter < contacts.length; counter++){ %>
+            <ul>
+                <li><a href="/select_contact/<%= contacts[counter].id %>"><%= contacts[counter].first_name + ' ' + contacts[counter].last_name%></a></li>
+            </ul>
+        <% } %>
+    </aside>
+
+    <!-- Messaging -->
+    <div id="chat">
+        <% for(let counter = 0; counter < messages.length; counter++){ %>
+            <% if(sender == messages[counter].sender){ %>
+                <p class="messages right"><%= messages[counter].message %></p>
+            <% }else{ %>
+                <p class="messages left"><%= messages[counter].message %></p>
+            <% } %>
+        <% } %>
+        <form action="/send_message" method="post">
+            <input type="text" name="message" value="" />
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+
+</body>
+</html>

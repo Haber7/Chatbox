@@ -1,0 +1,66 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+    p#error_message{
+        text-align: center;
+        background-color: rgb(255, 166, 166);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    p#message{
+        text-align: center;
+        background-color: rgb(118, 255, 118);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    nav{
+        position: relative;
+    }
+        nav > h1{
+            margin: 20px;
+            display: inline-block;
+        }
+        nav > h3{
+            margin: 20px;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+    h1, a{
+        margin-left: 20px;
+    }
+    form.authentication_form{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        width: 30%;
+        padding-bottom: 50px !important;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+        form.authentication_form > label{
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        form.authentication_form > input[type="text"], form.authentication_form > input[type="password"]{
+            font-size: 1.2rem;
+            width: 100%;
+        }
+        form.authentication_form > input[type="submit"]{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            padding: 10px;
+            color: white;
+            background-color: #00a00e;
+            border: 2px solid black;
+            box-shadow: 3px 3px black;
+        }
+        form.authentication_form > input[type="submit"]:hover{
+            border: 3px solid black;
+            cursor: pointer;
+        }
+

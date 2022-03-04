@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('./partials/authentication_header') %>
+
+</head>
+<body>
+
+    <%- include('./partials/authentication_nav') %>
+
+    <!-- Error message in Login -->
+    <% if(error_message != null){ %>
+        <p id="error_message"><%= error_message %></p>
+    <% } %>
+
+    <!-- Message that an account has been  created -->
+    <% if(message != null){ %>
+        <p id="message"><%= message %></p>
+    <% } %>
+
+    <h1>Login</h1>
+    <form id="login_form" class="authentication_form" action="/validate_login" method="post">
+        <label for="email_address">Email address:</label>
+        <input type="text" id="email_address" name="email_address" />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+        <input type="submit" id="login_btn" name="login" value="Login"/>
+    </form>
+    <a href="/register">Don't have an account? Register</a>
+
+</body>
+</html>
